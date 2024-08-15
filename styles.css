@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"Open Sans", system-ui;;
+}
+header{
+    height: 100vh;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+.logo h1{
+    font-weight: 600;
+    font-size: 25px;
+    color: green;
+}
+.logo i{
+    color: green;
+    font-size: 30px;
+    padding-right: 5px; 
+}
+
+.hamburger{
+    display: none;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: green;
+}
+nav button {
+    border: none;
+    background-color: green;
+   padding: 8px 30px;
+   border-radius: 5px;
+   transition: 2s ease-in-out;
+}
+nav button a{
+    color: white;
+    font-weight: 600;
+}
+nav button:hover{
+    background-color: white;
+    border: 1px solid   green;
+}
+nav button:hover a{
+    color: green;
+}
+/*Nav bar is done #1B99D4 , #5297cf,rgb(26, 26, 205)*/
+
+
+/*Hero page*/
+.heropage{
+    background-image: linear-gradient(to bottom right, #14e46a,rgb(92, 165, 24), rgb(53, 128, 0) );
+    padding: 50px;
+}
+.heroPageflex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.heropage{
+    line-height: 40px;
+}
+.heropageinfo{
+    max-width: 500px;
+}
+#firsttxt{
+    color: white;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.heropageinfo h2{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+#secondtxt{
+    color: white;
+    opacity: 0.7;
+}
+.heropageinfo h3{
+    padding: 10px 0px;
+    color: white;
+    font-weight: 400;
+}
+.heropageimg img{
+    max-width:500px;
+    
+}
+.heropageinfo button{
+    border: none;
+    background-color: white;
+}
+.heropageinfo button a{
+    text-decoration: none;
+    color: rgb(33, 32, 32);
+}
+.heropageinfo button{
+ padding: 10px 5px;
+ border-radius: 5px;
+    
+}
+.heropageform{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+.heropageform h2{
+    font-size: 25px;
+    padding: 5px;
+}
+.heropageform p{
+    font-size: 13px;
+    padding-bottom: 30px;
+}
+::placeholder{
+    padding-left: 5px;
+}
+input{
+    display: block;
+}
+input[type = text],input[type = email],input[type = tel]{
+    width: 300px;
+    padding: 8px 0px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+}
+input[type = text]:focus, input[type = email]:focus, input[type = tel]:focus{
+    border: 2px solid rgb(24, 165, 24);
+    outline: none;
+}
+select {
+    width: 300px;
+    padding: 8px 0px;
+    border: 1px solid grey;
+    color: grey;
+    margin-bottom: 20px;
+  }
+  select:focus{
+    outline: none;
+    border: 2px solid rgb(24, 165, 24);
+  }
+  input[type= submit]{
+    background-color: rgb(24, 165, 24);
+    border: none;
+    color: white;
+    padding: 5px 30px;
+   
+   
+  }
+  #cancel{
+    color: white;
+  }
+  @media screen and (max-width:614px){
+    
+        .heropageinfo{
+            width: 100%;
+        }
+        #cancel{
+            color: green;
+          }
+        .heroPageflex{
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr;
+        }
+        .heropageimg img{
+            max-width: 290px;
+        }
+      .heropageform{
+        display: none;
+      }
+      .heropagedemo{
+        display: none;
+      }
+      nav i{
+   
+        color: green;
+        font-size: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top:23px;
+        right: 20px;
+      }
+      .hamburger{
+        display: block;
+        font-size: 40px;
+        color: green;
+      }
+      .main-nav{
+        display: none;
+      }
+       .main-nav {
+        display: flex;
+        min-height: 100vh;
+        position: fixed;
+        background-color: white;
+        top:0px;
+        right: -200px;
+        min-width: 200px;
+        z-index: 1;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px 20px;
+        transition: all 1s ease-in-out;
+      }
+      .main-nav a{
+        color: green;
+      }
+      .main-nav button a {
+        color: white;
+      }
+      .opennow{
+        transform: translateX(-200px);
+    }
+    input[type = text],input[type = email],input[type = tel]{
+        width: 100%;
+    }
+    .heropagedemo{
+        display: none;
+    }
+  }
+  @media screen and (min-width:615px)and (max-width:894px){
+    .heropageinfo{
+        width: 100%;
+    }
+    .heropagedemo{
+        display: none;
+    }
+    nav i{
+   
+        color: green;
+        font-size: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top:23px;
+        right: 20px;
+      }
+      #cancel{
+        color: green;
+      }
+    .heroPageflex{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .heropageform{
+         width: 100%;
+      }
+  
+  .hamburger{
+    display: block;
+    font-size: 40px;
+    color: green;
+  }
+  .main-nav{
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    min-height: 100vh;
+    position: fixed;
+    background-color: white;
+    top:0px;
+    right: -200px;
+    min-width: 200px;
+    z-index: 1;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 20px;
+    transition: all 1s ease-in-out;
+  }
+  .main-nav a{
+    color: green;
+  }
+  .opennow{
+    transform: translateX(-200px);
+}
+  .main-nav button a {
+    color: white;
+  }
+input[type = text],input[type = email],input[type = tel]{
+    width: 100%;
+}
+  }
+  @media screen and (min-width:1228px) {
+    .heropagedemo{
+        display: none;
+    }
+  }
+  @media screen and (min-width:895px)and  (max-width:1227px){
+    .heroPageflex{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .heropagedemo{
+        display: block;
+    }
+    .heropagedemo{
+       text-align: center;
+        color: white;
+    }
+    .heropageform{
+         grid-column-start: 1;
+        grid-column-end: 2;
+      }
+  
+  .hamburger{
+    display: block;
+    font-size: 40px;
+    color: green;
+  }
+  .main-nav{
+    display: none;
+  }
+  nav i{
+   
+    color: white;
+    font-size: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top:23px;
+    right: 20px;
+  }
+   .main-nav {
+    display: flex;
+    min-height: 100vh;
+    position: fixed;
+    background-color: green;
+    top: 0;
+    right: -200px;
+    z-index: 1;
+    min-width: 200px;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 20px;
+    transition: all 1s ease-in-out;
+  }
+  .main-nav a{
+    color: white;
+  }
+  .main-nav button a{
+    color: green;
+  }
+  .main-nav button{
+    background-color: white;
+  }
+  .opennow{
+    transform: translateX(-200px);
+}
+input[type = text],input[type = email],input[type = tel]{
+    width: 100%;
+}
+
+  }
+ 
+  
